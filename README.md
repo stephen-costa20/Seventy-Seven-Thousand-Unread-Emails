@@ -78,16 +78,40 @@ credentials.json
 
 ## ▶️ How to Run
 
+### 1. Create and activate a virtual environment
+
+**macOS / Linux**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**Windows**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 2. Install dependencies
+
+Make sure you are inside the virtual environment, then run:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the script
+
 ```bash
 python mark_unread_as_read.py
 ```
 
-On first run:
-- A browser window will open
-- You will be asked to sign in to Google
+### What to Expect on First Run
+
+- A browser window will open automatically
+- You will be prompted to sign in to your Google account
 - You must approve Gmail access
 
-After approval:
+After successful authorization:
 - A local file named `token.json` is created
 - Future runs will reuse this token automatically
 
@@ -131,9 +155,14 @@ It does **not** delete messages or access other Google services.
 
 ## 🚧 Future Upgrades
 
-I plan on adding a user interface and the ability to download emails and delete those emails that have already been downloaded. 
+This project is actively evolving. Planned enhancements include:
 
-That is on-going and will update once I have it completed.
+- A simple user interface to make the tool easier to use for non-technical users
+- The ability to download and locally archive emails
+- Optional deletion of emails after they have been successfully downloaded
+- Additional safety checks and confirmations for destructive actions
+
+Development is ongoing, and this section will be updated as new features are completed and released.
 
 ## ⚖️ Use at Your Own Risk Disclaimer
 
